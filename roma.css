@@ -1,0 +1,322 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+      background-size: cover;       /* A imagem cobre todo o corpo */
+  background-position: center;  /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete */
+  background-attachment: fixed; /* Fica fixa ao rolar a página */
+    color: #333;
+}
+
+body.roma {
+  background-image: url('img/backgroundroma.jpeg');
+}
+
+/* HEADER COM GRADIENTE */
+header {
+  background: none;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap; /* garante que em telas pequenas os itens quebrem linha */
+}
+
+.logo {
+  max-height: 50px;
+  flex-shrink: 0;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.switch-btn {
+  text-decoration: none;
+  background: #025bff; /* vermelho padrão (Veloz) */
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.switch-btn:hover {
+  background: #a50e25;
+}
+
+/* Para o Roma você pode sobrescrever a cor */
+.roma .switch-btn {
+  background: #5811b4;
+}
+.roma .switch-btn:hover {
+  background: #740f88;
+}
+
+
+.logo-container {
+    position: absolute; /* Mantém a posição absoluta para o logo */
+    left: 1.5rem;
+    top: 50%; /* Centraliza verticalmente o logo */
+    transform: translateY(-50%); /* Ajuste para centralização perfeita */
+}
+
+.logo {
+    height: 50px;
+}
+
+.title {
+    margin: 0;
+    font-size: 2rem;
+    flex-grow: 1; /* Permite que o título ocupe o espaço restante */
+    text-align: center; /* Garante que o título permaneça centralizado */
+}
+
+/* MAIN */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* SECTIONS E BOTÕES */
+.section {
+    margin-bottom: 2rem;
+}
+
+.toggle-button {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 1rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+    transition: all 0.4s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toggle-button:hover {
+    background: #dadada;
+    transform: translateY(-2px);
+}
+
+/* CONTEÚDO */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, padding 0.4s ease;
+    padding: 0 1rem;
+    background: white;
+    border-left: 4px solid #9e4bc5;
+    margin-top: 0.5rem;
+    border-radius: 0 8px 8px 8px;
+}
+
+.content.active {
+    max-height: 5000px; /* Aumentado para acomodar mais conteúdo */
+    padding: 1rem;
+}
+
+/* GRADE DE DOWNLOAD (para marca veloz, catálogos, certificados) */
+.download-grid {
+    display: grid;
+    /* Ajustado para ser mais flexível */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Min-width um pouco menor */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.download-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza conteúdo verticalmente */
+    background: #cecece;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+    min-height: 80px; /* Garante uma altura mínima para itens sem imagem grande */
+}
+
+.download-item:hover {
+    transform: scale(1.03);
+    background: #8b8b8b;
+}
+
+.download-item a {
+    text-decoration: none;
+    color: #0055ff;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    transition: color 0.3s;
+    word-break: break-word; /* Quebra palavras longas para evitar overflow */
+}
+
+.download-item a:hover {
+    color: #6610c8;
+}
+
+.download-item img {
+    max-width: 100%; /* Garante que a imagem não transborde */
+    height: auto;
+    max-height: 80px; /* Limita a altura das imagens nos download-items */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
+/* PRODUTOS */
+.product-grid {
+    display: grid;
+    /* **Ajuste principal aqui:** Permite que mais colunas sejam criadas automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Cada produto terá no mínimo 160px */
+    gap: 20px;
+    padding: 20px 0;
+    justify-items: center; /* Centraliza os itens dentro de suas células de grid */
+}
+
+.product-item {
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    background-color: #ffffff; /* Adicione um fundo para cada item de produto */
+    padding: 15px; /* Espaçamento interno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    display: flex; /* Para alinhar imagem e texto */
+    flex-direction: column; /* Conteúdo em coluna */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    width: 100%; /* Ocupa a largura total da célula */
+    max-width: 200px; /* Define um tamanho máximo razoável para o item do produto */
+}
+
+.product-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada no hover */
+}
+
+.product-item img {
+    width: 100%;
+    max-height: 150px; /* Limita a altura da imagem para não ficarem muito altas */
+    height: auto;
+    object-fit: contain; /* Garante que a imagem seja contida dentro do espaço sem ser cortada */
+    border-radius: 8px; /* Arredondamento da imagem */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item img:hover {
+    transform: scale(1.05);
+}
+
+.product-item p {
+    margin-top: 10px; /* Aumenta o espaçamento entre imagem e texto */
+    font-weight: 600; /* Um pouco mais de peso na fonte */
+    font-size: 0.95rem; /* Ajuste o tamanho da fonte */
+    text-align: center; /* Centraliza o texto do produto */
+    color: #333; /* Cor do texto */
+}
+
+.product-item p a {
+    color: #0055ff; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: color 0.3s ease;
+}
+
+.product-item p a:hover {
+    color: #611081; /* Cor do link no hover */
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #c8102e;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    .logo-container {
+        position: static; /* Remove posicionamento absoluto em telas menores */
+        transform: none;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .toggle-button {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .download-grid, .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Menos colunas em telas menores */
+        gap: 15px;
+    }
+
+    .product-item {
+        padding: 10px;
+        max-width: none; /* Remove max-width para permitir que o grid controle o tamanho */
+    }
+
+    .product-item img {
+        max-height: 120px;
+    }
+
+    .product-item p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .download-grid, .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Ainda menos colunas */
+        gap: 10px;
+    }
+
+    .product-item img {
+        max-height: 100px;
+    }
+
+    .product-item p {
+        font-size: 0.8rem;
+    }
+}
