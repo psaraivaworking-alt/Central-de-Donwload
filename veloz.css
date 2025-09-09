@@ -11,7 +11,7 @@ body {
 }
 
 body.veloz {
-  background-image: url('img/backgroundveloz.jpeg');
+  background-image: url('./img/backgroundveloz.jpeg');
 }
 
 /* HEADER COM GRADIENTE */
