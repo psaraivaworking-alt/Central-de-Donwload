@@ -13,58 +13,42 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       min-height: 100vh;
     }
 
-
-    .text{
-      padding: 1px;
+    .text {
+      padding: 10px;
+      text-align: center;
     }
 
     h1 {
       font-size: 1.8rem;
       color: #333;
-      text-align: center;
-      margin-bottom: 0px;
+      margin-bottom: 5px;
     }
 
-    h3{
-      margin-top: 2px;
+    h3 {
+      margin-top: 0;
+      color: #555;
     }
 
     .brand-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 2rem;
       width: 90%;
       max-width: 700px;
+      margin-top: 20px;
     }
 
     .brand {
       background: #fff;
       border-radius: 1rem;
-      padding: 2rem;
+      padding: 1.5rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       display: flex;
-      flex-direction: column;
-      height: 100px;
-      width: 130px;
       align-items: center;
-      transition: transform 0.3s;
-    }
-
-     #brand{
-      padding-bottom: 0px;
-      padding-top: 60px;
-     background: #fff;
-      border-radius: 1rem;
-      padding: 2rem;
-      gap: 17px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
       transition: transform 0.3s;
     }
 
@@ -73,47 +57,30 @@
     }
 
     .brand img {
-      max-width: 160px;
-      margin-bottom: 1.5rem;
+      max-width: 140px;
+      height: auto;
+      display: block;
     }
 
     .brand a {
-      padding-bottom: 0px;
-      display: inline-block;
-      text-decoration: none;
-      background: none;
-      color: #fff;
-      padding: 0.8rem 1.6rem;
-      border-radius: 0.5rem;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .brand:nth-child(2) a {
-      background: none;
-    }
-
-    .brand a:hover {
-      opacity: 0.85;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     footer {
-        text-align: center;
+      text-align: center;
       margin-top: 3rem;
       font-size: 0.9rem;
       color: #666;
     }
-
-
-   
   </style>
 </head>
 <body>
   <div class="text">
- <h1>Central de Downloads</h1>
-  <h3>Clique na marca em que você deseja acessar.</h3>
+    <h1>Central de Downloads</h1>
+    <h3>Clique na marca em que você deseja acessar.</h3>
   </div>
- 
 
   <div class="brand-container">
     <div class="brand">
@@ -121,19 +88,16 @@
         <img src="./img/Nova Marca Veloz Fundo Branco.png" alt="Tintas Veloz">
       </a>
     </div>
-    <div class="brand" id="brand">
-     
-      <a class="rominha" href="roma.html">
-         <img src="./romaimg/6.png" alt="Romagold">
+    <div class="brand">
+      <a href="roma.html">
+        <img src="./romaimg/6.png" alt="Romagold">
       </a>
     </div>
   </div>
 
   <footer>
-    &copy;2025 Pintor Parceiro Veloz. Todos os direitos reservados.
-<br>
-
-By @equipemarketing Tintas Veloz.
+    &copy;2025 Pintor Parceiro Veloz. Todos os direitos reservados.<br>
+    By @equipemarketing Tintas Veloz.
   </footer>
 </body>
 </html>
