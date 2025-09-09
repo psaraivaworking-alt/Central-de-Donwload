@@ -3,22 +3,69 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f4f4f4;
+      background-size: cover;       /* A imagem cobre todo o corpo */
+  background-position: center;  /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete */
+  background-attachment: fixed; /* Fica fixa ao rolar a página */
     color: #333;
+}
+
+body.veloz {
+  background-image: url('img/backgroundveloz.jpeg');
 }
 
 /* HEADER COM GRADIENTE */
 header {
-    background: linear-gradient(135deg, #80d0ff, #6c63ff);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    position: relative;
-    display: flex; /* Adicionado para alinhar logo e título */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza o conteúdo (título) */
+  background: none;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap; /* garante que em telas pequenas os itens quebrem linha */
+}
+
+.logo {
+  max-height: 50px;
+  flex-shrink: 0;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.switch-btn {
+  text-decoration: none;
+  background: #025bff; /* vermelho padrão (Veloz) */
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.switch-btn:hover {
+  background: #a50e25;
+}
+
+/* Para o Roma você pode sobrescrever a cor */
+.roma .switch-btn {
+  background: #0055ff;
+}
+.roma .switch-btn:hover {
+  background: #003fbb;
+}
+
 
 .logo-container {
     position: absolute; /* Mantém a posição absoluta para o logo */
@@ -51,8 +98,8 @@ main {
 }
 
 .toggle-button {
-    background: linear-gradient(90deg, #c8102e, #0055ff);
-    color: white;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 1rem 1.5rem;
     border: none;
     cursor: pointer;
@@ -65,7 +112,7 @@ main {
 }
 
 .toggle-button:hover {
-    background: linear-gradient(90deg, #a50e26, #003bbb);
+    background: #dadada;
     transform: translateY(-2px);
 }
 
