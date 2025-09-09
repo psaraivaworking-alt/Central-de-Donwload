@@ -60,7 +60,7 @@ header {
 
 /* Para o Roma você pode sobrescrever a cor */
 .roma .switch-btn {
-  background: #5811b4;
+  background: #025bff;
 }
 .roma .switch-btn:hover {
   background: #740f88;
